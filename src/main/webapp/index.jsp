@@ -1,169 +1,285 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr. Camel</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishnavi Waghmare - Portfolio</title>
 
-    body {
-      margin: 0;
-      box-sizing: border-box;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    .container {
-      line-height: 150%;
-    }
+<style>
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-      background-color: #e9e9e9;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-    .header h1 {
-      color: #222222;
-      font-size: 30px;
-      font-family: 'Pacifico', cursive;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    .header .social a {
-      padding: 0 5px;
-      color: #222222;
-    }
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f8fc;
+    color:#4a5568;
+}
 
-    .left {
-      float: left;
-      width: 180px;
-      margin: 0;
-      padding: 1em;
-    }
+/* Header */
 
-    .content {
-      margin-left: 190px;
-      border-left: 1px solid #d4d4d4;
-      padding: 1em;
-      overflow: hidden;
-    }
+.header{
+    background:#eef2f7;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
 
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-    }
+.header h1{
+    color:#2d3748;
+    font-size:28px;
+}
 
-    li a {
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
-    }
+.social a{
+    color:#5f6f81;
+    margin-left:15px;
+    font-size:20px;
+    text-decoration:none;
+}
 
-    li a.active {
-      background-color: #84e4e2;
-      color: white;
-    }
+.social a:hover{
+    color:#7a8da5;
+}
 
-    li a:hover:not(.active) {
-      background-color: #29292a;
-      color: red;
-    }
+/* Sidebar */
 
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-      margin: 30px 0;
-    }
+.sidebar{
+    width:220px;
+    background:#f8f5f0;
+    position:fixed;
+    height:100%;
+    padding:25px;
+}
 
-    td,
-    th {
-      border: 1px solid #dddddd;
-      padding: 8px;
-    }
+.sidebar img{
+    width:160px;
+    border-radius:10px;
+    display:block;
+    margin:auto;
+}
 
-    tr:nth-child(1) {
-      background-color: #84e4e2;
-      color: white;
-    }
+.sidebar ul{
+    list-style:none;
+    margin-top:20px;
+}
 
-    tr td i.fas {
-      display: block;
-      font-size: 35px;
-      text-align: center;
-    }
+.sidebar ul li{
+    margin:10px 0;
+}
 
-    .footer {
-      padding: 55px 20px;
-      background-color: #2e3550;
-      color: white;
-      text-align: center;
-    }
-  </style>
+.sidebar ul li a{
+    text-decoration:none;
+    color:#4a5568;
+    display:block;
+    padding:10px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.sidebar ul li a:hover{
+    background:#dce6f2;
+}
+
+.quote{
+    margin-top:30px;
+    font-size:14px;
+}
+
+/* Main Content */
+
+.content{
+    margin-left:240px;
+    padding:30px;
+}
+
+.content h2{
+    color:#2d3748;
+    margin-bottom:10px;
+}
+
+.content p{
+    margin-bottom:20px;
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+    background:#a8c3a0;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+table i{
+    font-size:30px;
+    color:#5f6f81;
+}
+
+/* Form */
+
+form{
+    margin-top:30px;
+}
+
+input[type="text"],
+textarea{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+input[type="submit"]{
+    background:#5f6f81;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover{
+    background:#70839a;
+}
+
+/* Footer */
+
+.footer{
+    margin-left:240px;
+    background:#5f6f81;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+</style>
+
 </head>
 
 <body>
-  <div class="container">
-    <header class="header">
-      <h1>Vaishnavi Waghmare batch-071</h1>
-      <div class="social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-    </header>
-    <aside class="left">
-      <img src="./assets/html/mr-camel.jpg" width="160px" />
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#career">Career</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-      <br><br>
-      <p>"Do something important in life. I convert green grass to code."<br>- Mr Camel</p>
-    </aside>
-    <main class="content">
-      <h2>About Me</h2>
-      <p>I don't look like some handsome horse, but I am a real desert king. I can survive days without water.</p>
-      <h2>My Career</h2>
-      <p>I work as a DevOps Engineer for a company that makes DevOps SAS Toos for Business.</p>
-      <hr><br>
-      <h2>How Can I Help You?</h2>
-      <table>
-        <tr>
-          <th>SKILL 1</th>
-          <th>SKILL 2</th>
-          <th>SKILL 3</th>
-        </tr>
-        <tr>
-          <td><i class="fas fa-broom"></i></td>
-          <td><i class="fas fa-archive"></i></td>
-          <td><i class="fas fa-trailer"></i></td>
-        </tr>
-        <tr>
-          <td>Cleaning kaktus in your backyard</td>
-          <td>Storing some fat for you</td>
-          <td>Taking you through the desert</td>
-        </tr>
-        <tr>
-      </table>
-      <form>
-        <label>Email: <input type="text" name="email"></label><br>
-        <label> Mobile: <input type="text" name="mobile"> </label><br>
-        <textarea name="comments" rows="4">Enter your message</textarea><br>
-        <input type="submit" value="Submit" /><br>
-      </form>
-    </main>
-    <footer class="footer">&copy; Copyright Mr. Camel</footer>
-  </div>
-</body>
 
+<header class="header">
+    <h1>Vaishnavi Waghmare - Batch 071</h1>
+
+```
+<div class="social">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+```
+
+</header>
+
+<aside class="sidebar">
+
+```
+<img src="profile.jpg" alt="Profile Image">
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Career</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">About</a></li>
+</ul>
+
+<div class="quote">
+    <p>
+        "Success is built through continuous learning,
+        practice, and determination."
+    </p>
+</div>
+```
+
+</aside>
+
+<main class="content">
+
+```
+<h2>About Me</h2>
+<p>
+    I am Vaishnavi Waghmare, a Computer Science graduate
+    interested in Cloud Computing, AWS, Linux, DevOps,
+    Docker, Kubernetes, and Automation technologies.
+</p>
+
+<h2>My Career</h2>
+<p>
+    My goal is to start my career as a Cloud or DevOps Engineer
+    and contribute to building scalable and reliable systems.
+</p>
+
+<hr>
+
+<h2>My Skills</h2>
+
+<table>
+
+    <tr>
+        <th>AWS</th>
+        <th>Docker</th>
+        <th>Kubernetes</th>
+    </tr>
+
+    <tr>
+        <td><i class="fas fa-cloud"></i></td>
+        <td><i class="fab fa-docker"></i></td>
+        <td><i class="fas fa-dharmachakra"></i></td>
+    </tr>
+
+    <tr>
+        <td>Cloud Infrastructure</td>
+        <td>Containerization</td>
+        <td>Container Orchestration</td>
+    </tr>
+
+</table>
+
+<form>
+
+    <label>Email</label>
+    <input type="text" placeholder="Enter your email">
+
+    <label>Mobile Number</label>
+    <input type="text" placeholder="Enter your mobile number">
+
+    <label>Message</label>
+    <textarea rows="5" placeholder="Enter your message"></textarea>
+
+    <input type="submit" value="Submit">
+
+</form>
+```
+
+</main>
+
+<footer class="footer">
+    © 2026 Vaishnavi Waghmare | Portfolio Website
+</footer>
+
+</body>
 </html>
